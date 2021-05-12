@@ -9,7 +9,7 @@ description: "This repo contains sample applications to show how you can instrum
 urlFragment: azure-monitor-opencensus-python
 ---
 
-# Azure Monitor Python Sample Applications
+# Azure Monitor Python Sample Application
 
 This repo contains following sample applications.
 
