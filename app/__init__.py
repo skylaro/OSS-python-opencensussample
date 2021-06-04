@@ -1,5 +1,6 @@
 import logging
 import sys
+import signal
 
 from flask import Flask
 
@@ -50,6 +51,13 @@ logger.addHandler(
         )
     )
 
+def handleSignal(sig, frame):
+    logger.warning("Caught signal")
+    return
 
 if __name__ == '__main__':
+    signal.signal(signal.SIGTERM, handleSignal)
+    signal.signal(signal.SIGQUIT, handleSignal)
+    signal.signal(signal.SIGKILL, handleSignal)
+    signal.signal(signal.SIGHUP, handleSignal)
     app.run(host='localhost', port=5000, threaded=True, debug=True)

@@ -9,7 +9,7 @@ class Config(object):
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     INSTRUMENTATION_KEY = os.environ.get('APPINSIGHTS_INSTRUMENTATIONKEY') or \
-       'c9fc609c-c0ca-4c10-af63-a070b8bd505e'
+       'e68b4afd-0d26-44ce-a1ae-b0707eb83c64'
     CONNECTION_STRING = 'InstrumentationKey=' + INSTRUMENTATION_KEY
     sampler = 'opencensus.trace.samplers.ProbabilitySampler(rate=1.0)'
     OPENCENSUS = {
